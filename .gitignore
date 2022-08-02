@@ -1,6 +1,6 @@
 /www/gnu
 /www/img
 /.vscode
-/git
+/.git
 *.gif
 *.png
