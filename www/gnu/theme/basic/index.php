@@ -127,7 +127,7 @@ if(G5_COMMUNITY_USE === false) {
                             <img src="/gnu/img/GJ/call.png" alt="전화">
                             <a href="tel:031-711-3275"><span>031-711-3275</span></a>
                         </div>
-                        <a href="http://kko.to/kw60b5gzM">
+                        <a href="http://kko.to/kw60b5gzM" target="_blank">
                             <span>경기 성남시 분당구 황새울로214번길 8</span>
                         </a>
                     </div>
@@ -139,7 +139,7 @@ if(G5_COMMUNITY_USE === false) {
                             <img src="/gnu/img/GJ/call.png" alt="전화">
                             <a href="tel:02-790-9811"><span>02-790-9811</span></a>
                         </div>
-                        <a href="http://kko.to/StKMf1a0o">
+                        <a href="http://kko.to/StKMf1a0o" target="_blank">
                             <span>서울 용산구 이태원동 22-76,몬드리안 서울 이태원 B1F</span>
                         </a>
                     </div>

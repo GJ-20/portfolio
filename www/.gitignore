@@ -9,6 +9,7 @@ lib/
 shop/
 skin/
 git/
+framework/
 .vscode/
 *.gif
 *.png
