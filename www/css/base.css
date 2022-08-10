@@ -16,6 +16,11 @@ a{
     color: black;
 }
 
+a:hover{
+    color: #998549;
+    text-decoration: none;
+}
+
 body,html{
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -149,7 +154,23 @@ body,html{
 }
 
 
-
+.maintext{
+    -webkit-animation: in 3s linear;
+	animation: in 3s linear;
+    animation-iteration-count:1;
+	animation-fill-mode:forwards;
+    background-origin:center;
+}
+@-webkit-keyframes in {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1s;
+    }
+}
 #gnb a.act{
     display: block;
     color: white;
@@ -186,12 +207,68 @@ h4[class="white"]::after{
 
 #project{
     margin-top: 5em;
-    height: 100vh;
+ 
     background-color: #ffd006;
 
 }
 
+.otherarts{
+    overflow: hidden;
+    padding-bottom: 3em;
+}
 
+.otherarts li{
+    width: auto;
+    height: 13em;
+   margin: 0.5em;
+
+}
+.otherarts li  a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.otherarts li  a img{
+
+    display: block;
+   height: 13em;
+}
+
+.otherarts figure{
+   width: 100%;
+   height: 100%;
+}
+.otherarts figcaption{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+  
+    position: absolute;
+    top: 0; right: 0;
+  
+    color: #fff; text-align: center;
+    line-height: 13em;
+  
+    opacity: 0;
+  
+    transition: 0.3s;
+}
+
+.otherarts a:hover figcaption, .otherarts a:focus figcaption{
+    /* 마우스를 올리면 보이게 처리 */
+    opacity: 1;
+  }
+
+figcaption{
+    
+    border: 1px solid white;
+}
+
+figcaption strong{
+    padding: 1em 2em;
+    border: 1px solid white;
+}
 /* ///////////////////스킬파트////////////////////////// */
 
 
@@ -223,7 +300,10 @@ h4[class="white"]::after{
 
 
 .harfimg{
-    text-align: center
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 }
 
 .skills{
@@ -297,7 +377,7 @@ padding-top: 5em;
 .harfimgs{
     display: inline-block;
     max-width:45%;
-    margin: 6px;
+    margin: 10px;
     transition: all 0.2s linear;
     
 }
@@ -306,10 +386,7 @@ padding-top: 5em;
 .harfimgs:hover{
     transform: scale(1.1);
 }
-.harfimgs:nth-child(3),
-.harfimgs:nth-child(4){
-    margin-top: 16px;
-}
+
 
 
 
@@ -343,8 +420,8 @@ padding-top: 5em;
         #ffd006 100%);
     }
     .skillimg{
-        width: 100vh;
-        height: 700px;
+        width: 70vh;
+        height: 600px;
         padding: 0;
     }
     .skills{
@@ -451,9 +528,7 @@ margin-top: 1em;
     margin-top: 2em;
     text-align: center;
 }
-.first span,
-.second span,
-.third span{
+.ext{
     font-size: 0.8em;
     line-height: 3em;
     border-radius: 3em;
@@ -470,17 +545,13 @@ margin-top: 1em;
      */
 }
 
-.first span:hover,
-.second span:hover,
-.third span:hover{
+.ext:hover{
     position: relative;
     color: #ffd006;
     background-color: #ffd006;
 }
 
-.first span:hover::before,
-.second span:hover::before,
-.third span:hover::before
+.ext:hover::before
     {  position: absolute;
         z-index: 1;
         top:0;
@@ -568,9 +639,7 @@ margin-top: 1em;
   
     }
     
- .first span,
-.second span,
-.third span{
+ .ext{
     font-size: 0.8em;
     line-height: 3em;
     border-radius: 3em;
@@ -596,9 +665,7 @@ margin-top: 1em;
 }
 @media (min-width:1200px){
 
-    .first span,
-    .second span,
-    .third span{
+    .ext{
         font-size: 1em;
         line-height: 3em;
         border-radius: 3em;
@@ -674,8 +741,8 @@ margin-top: 1em;
     background-repeat: no-repeat;
     background-image: url("/img/twinkle.svg");
 
-    -webkit-animation: zoomin 5s infinite;
-	animation: zoomin 5s infinite;
+    -webkit-animation: zoomin 3s infinite;
+	animation: zoomin 3s infinite;
 	animation-fill-mode:forwards;
     background-origin:center;
 }
@@ -685,7 +752,7 @@ margin-top: 1em;
 
 .twinkle2::before{
     transform: translate(-6em, -0.5em);
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
 }
 @-webkit-keyframes zoomin {
     0% {
@@ -700,10 +767,93 @@ margin-top: 1em;
 
 }
 
+.volunteer ul li strong{
+    background-color: #ffd006;
+    pointer-events: none;
+}
+
+.volunteer ul li span{
+    background-color: white;
+    pointer-events: none;
+}
+
+
+.won1::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: -10%;
+    z-index: -1;
+    left:-10%;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 2px solid #ffd006;
+
+    -webkit-animation: down 3s infinite;
+	animation: down 3s infinite;
+    animation-delay: 1s;
+	animation-fill-mode:forwards;
+    background-origin:center;
+}
+
+@-webkit-keyframes down {
+    0% {
+        transform:translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform:translateY(50px);
+        opacity: 1;
+    }
+    100% {
+        transform:translateY(0);
+        opacity: 0.5;
+    }
+
+}
+
+.won2::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: -10%;
+    z-index: -1;
+    right:-10%;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-color: #ffd006;
+    border: 2px solid #ffd006;
+
+    -webkit-animation: up 3s infinite;
+	animation: up 3s infinite;
+    animation-delay: 1s;
+	animation-fill-mode:forwards;
+    background-origin:center;
+}
+
+@-webkit-keyframes up {
+    0% {
+        transform:translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform:translateY(-50px);
+        opacity: 0.5;
+    }
+    100% {
+        transform:translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
 /* ///////////////인터뷰페이지////////////// */
 
 .preinterview{
-    height: 90vh;
+    height: 80vh;
     background-color:white;
 }
 .interviewcontents{
@@ -762,4 +912,29 @@ input[id*="a"]:checked + label em{
     border: 3px solid black;
     border-bottom: none;
     border-left: none;
+}
+
+/* /////////연락페이지//////////// */
+
+.ftimg{
+    width: 100vw;
+    height: 60vh;
+    
+    background-size: 100% auto;
+    
+    background-repeat: no-repeat;
+    background-image: url(/img/footerimg.png);
+}
+.fttext{
+    display: block;
+    padding-top: 1em;
+    line-height: 4vh;
+    font-weight: 100;
+    font-size: 7vh;
+    transition: 0.6s;
+}
+
+.fttext:hover{
+    font-size: 8vh;
+
 }

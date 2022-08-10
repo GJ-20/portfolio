@@ -1,23 +1,18 @@
+AOS.init();
+
 $(document).ready(function(){
 
-    $("#allmenu").click(function(){
-        $(this).toggleClass("open");
-    })
-  
-    $("a.scroll-page").click(function(e){
-        e.preventDefault();
-        var clicka = $(this)
-        
-        $("body,html").animate({
-            scrollTop:($(clicka.attr("href")).offset().top - 120)
-        },400,function(){
-        //gnb a
-            $("#gnb a").removeClass("act")
-            clicka.addClass("act");
-    })
-    })
+$("#side a").click(function(e){
+    e.preventDefault();
+    $("#side li").removeClass("on")
+    $(this).parent().addClass("on")
 
-    const swiper = new Swiper('#me .swiper', {
+    $("body, html").animate({
+        scrollTop : $($(this).attr("href")).offset().top
+    },400)
+})
+
+    const swiper = new Swiper('#experince .swiper', {
         // Optional parameters
        slidesPerView: 2,
        spaceBetween: 10,
