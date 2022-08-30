@@ -12,6 +12,52 @@ $("#side a").click(function(e){
     },400)
 })
 
+
+
+        //모바일 네비게이션바 
+
+        $(".header .open").click(function(){
+            $(".m_naiv").addClass("m_slide")
+            $(this).removeClass("show")
+            $(".close").addClass("show")
+        })
+        $(".header .close").click(function(){
+            $(".m_naiv").removeClass("m_slide")
+            $(this).removeClass("show")
+            $(".open").addClass("show")
+        })
+
+
+   var sc_top;
+   var aw_top = $('#award').offset().top;
+   var aw_bottom = $('#award').offset().top + $('#award').height();
+   var aw_height = 0;
+
+   
+    $(window).scroll(function(){
+        sc_top = $(window).scrollTop();
+        $('.sec').each(function(){
+            if($(this).offset().top < sc_top + 100 ){
+                $('#side ul li').removeClass('on');
+                $("[href='#"+$(this).attr('id')+"']").parent().addClass('on')
+            }
+        })
+        if( sc_top == 0 ){
+            $('#side ul li').removeClass('on');
+            $("[href='#home']").parent().addClass('on');
+        }
+        if( aw_top > sc_top ){
+            aw_height = 0;
+        }
+
+
+        if( aw_top < sc_top  &&  aw_bottom > sc_top ){
+            aw_height = sc_top - aw_top;
+        }
+        $('.awardall .gray .grayline .yellow').height(aw_height )
+
+    })
+
     const swiper = new Swiper('#experince .swiper', {
         // Optional parameters
        slidesPerView: 2,
@@ -55,8 +101,73 @@ $("#side a").click(function(e){
         },
         });
 
-})
+    const swiper2 = new Swiper('#others .swiper', {
+        // Optional parameters
+        loop: true,
+        autoplay: {
+            delay: 5000,
+           },
+    
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
 
 
+        $(".boxs").height($(".boxs").width())
 
 
+        ///동영상 슬라이드
+
+        var port_videoArr =[
+           { id : 'z4zXxxWHpb4', ex : 'z4zXxxWHpb4', title :'마인드카페 광고페이지', links : [ 'https://ddev20.cafe24.com/gnu/', 'https://www.figma.com/file/fAL4SbUdO4iocLcgGuVYGz/%EB%A7%88%EC%9D%B8%EB%93%9C%EC%B9%B4%ED%8E%98?node-id=219%3A36','#3']  },
+           { id : '8Tr1qzxFcwQ', ex : '8Tr1qzxFcwQ', title :'마인드카페 광고페이지2', links : [ '#4', '#2','#3']  },
+           { id : '5KDai6hvgAs', ex : '5KDai6hvgAs', title :'마인드카페 광고페이지3', links : [ '#5', '#2','#3']  }
+        ]
+
+        var count = 0; 
+        var numtext;  
+        
+        $('.pages button').click(function(){
+            alert("준비중입니다")
+        });
+        // $('.s_button li').each(function(){
+        //     $(this).find('a').attr('href', port_videoArr[count].links[$(this).index()])
+        // })
+
+        // $('.pages button').click(function(){
+        //     if($(this).hasClass('prevBtn')){
+        //         if(count > 0){
+        //             count--;
+        //         }else{
+        //             count = port_videoArr.length - 1;  
+        //         }
+        //     }else{
+        //         count++;
+        //     }
+        //     count %= port_videoArr.length;
+        //     numtext = count + 1
+        //     $('#countnum').html(numtext);
+        //     $('.s_contents .p_title').html(port_videoArr[count].title);
+        //     $('.s_button li').each(function(){
+        //         $(this).find('a').attr('href', port_videoArr[count].links[$(this).index()])
+        //     })
+        //     $('.v_content iframe').attr('src','https://www.youtube.com/embed/'+port_videoArr[count].id+'?autoplay=1&mute=1&modestbranding=1&controls=0&playlist='+port_videoArr[count].ex+'&loop=1')
+
+        // })
+
+    }) ////ready
+
+       

@@ -47,7 +47,7 @@ border:1px solid #558ab7 !important;
 .placeholdersjs {color:#aaa !important}
 
 /* 레이아웃 크기 지정 */
-#hd, #wrapper, #ft {min-width:1200px}
+
 
 #hd_pop,
 #hd_wrapper,
@@ -55,7 +55,7 @@ border:1px solid #558ab7 !important;
 
 #gnb .gnb_wrap,
 #container_wr,
-#ft_wr {width:1200px}
+#ft_wr {max-width:1200px}
 
 /* 팝업레이어 */
 #hd_pop {z-index:1000;position:relative;margin:0 auto;height:0}
@@ -70,14 +70,14 @@ border:1px solid #558ab7 !important;
 .hd_pops_footer .hd_pops_close {background:#393939;position:absolute;top:0;right:0}
 
 /* 상단 레이아웃 */
-#hd {background:#fff; padding: 1rem; position: fixed; top: 0;left: 0;right: 0;z-index: 10;box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);}
+#hd {background:#fff; position: fixed; top: 0;left: 0;right: 0;z-index: 10;box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);}
 #hd_h1 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 
 #tnb {border-bottom:1px solid #EEE;margin:0 auto}
 #tnb:after {display:block;visibility:hidden;clear:both;content:""}
 #tnb .inner {margin:0 auto}
 
-#hd_wrapper {position:relative;margin:0 auto;display: flex;zoom:1;justify-content: space-between;
+#hd_wrapper {margin:0 auto;display: flex;zoom:1;justify-content: space-between;
   align-items: center;}
 /* #hd_wrapper:after {display:block;visibility:hidden;clear:both;content:""} */
 
@@ -113,15 +113,15 @@ border:1px solid #558ab7 !important;
 
 
 /* 메인메뉴 */
-#gnb {position:relative;background:#fff}
+#gnb {;background:#fff}
 #gnb > h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
-#gnb .gnb_wrap {margin:0 auto;position:relative;width:auto;}
+#gnb .gnb_wrap {margin:0 auto;width:auto;}
 #gnb .gnb_wrap:hover, #gnb .gnb_wrap:focus, #gnb .gnb_wrap:active{z-index:3}
 #gnb #gnb_1dul {font-size:1.3em;padding:0;
   /* border-bottom:1px solid #e0e2e5; */
   zoom:1}
 #gnb ul:after {display:block;visibility:hidden;clear:both;content:""}
-#gnb .gnb_1dli {float:left;line-height:55px;padding:0px;position:relative}
+#gnb .gnb_1dli {float:left;padding:0px;position:relative}
 #gnb .gnb_1dli:hover > a {color:#3a8afd;
 -webkit-transition:background-color 2s ease-out;
 -moz-transition:background-color 0.3s ease-out;
@@ -152,18 +152,18 @@ transition:all 0.3s ease-out}
 .gnb_wrap .gnb_empty a {color:#3a8afd;text-decoration:underline}
 .gnb_wrap .gnb_al_ul .gnb_empty, .gnb_wrap .gnb_al_ul .gnb_empty a {color:#555}
 
-#gnb .gnb_menu_btn {display:none;background:#4158d1;color:#fff;width:50px;height:55px;border:0;vertical-align:top;font-size:18px}
+#gnb .gnb_menu_btn {background-color: white; color:#7ED6D9;;width:50px;height:55px;border:0;vertical-align:top;font-size:18px}
 #gnb .gnb_close_btn {background:#fff;color:#b6b9bb;width:50px;height:50px;border:0;vertical-align:top;font-size:18px;position:absolute;top:0;right:0}
 /* #gnb .gnb_mnal {float:right;padding:0} */
 
-#gnb_all {display:none;position:absolute;border:1px solid #c5d6da;width:100%;background:#fff;z-index:1000;-webkit-box-shadow:0 2px 5px rgba(0,0,0,0.2);
+#gnb_all { text-align: center; overflow: hidden;transition: 0.6s; height: 0; left:0;position:absolute;border:1px solid #c5d6da;width:100%;background:#fff;z-index:1000;-webkit-box-shadow:0 2px 5px rgba(0,0,0,0.2);
 -moz-box-shadow:0 2px 5px rgba(0,0,0,0.2);
 box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #gnb_all h2 {font-size:1.3em;padding:15px 20px;border-bottom:1px solid #e7eeef}
 #gnb_all .gnb_al_ul:after {display:block;visibility:hidden;clear:both;content:""}
 #gnb_all .gnb_al_ul > li:nth-child(5n+1) {border-left:0}
-#gnb_all .gnb_al_li {float:left;width:20%;min-height:150px;padding:20px;border-left:1px solid #e7eeef}
-#gnb_all .gnb_al_li .gnb_al_a {font-size:1.2em;display:block;position:relative;margin-bottom:10px;font-weight:bold;color:#3a8afd}
+#gnb_all .gnb_al_li {float:left;padding:10px 0 0;border-left:1px solid #e7eeef}
+#gnb_all .gnb_al_li .gnb_al_a {font-size:1em;display:block;position:relative;margin-bottom:10px;font-weight:bold;color:#333}
 #gnb_all .gnb_al_li li {line-height:2em}
 #gnb_all .gnb_al_li li a {color:#555}
 #gnb_all_bg {display:none;background:rgba(0,0,0,0.1);width:100%;height:100%;position:fixed;left:0;top:0;z-index:999}
