@@ -132,7 +132,7 @@ $("#side a").click(function(e){
         ///동영상 슬라이드
 
         var port_videoArr =[
-           { id : 'z4zXxxWHpb4', ex : 'z4zXxxWHpb4', title :'마인드카페 광고페이지', links : [ 'https://ddev20.cafe24.com/gnu/', 'https://www.figma.com/file/fAL4SbUdO4iocLcgGuVYGz/%EB%A7%88%EC%9D%B8%EB%93%9C%EC%B9%B4%ED%8E%98?node-id=219%3A36','#3']  },
+           { id : 'z4zXxxWHpb4', ex : 'z4zXxxWHpb4', title :'마인드카페 광고페이지', links : [ 'https://ddev20.cafe24.com/gnu/', 'https://www.figma.com/file/fAL4SbUdO4iocLcgGuVYGz/%EB%A7%88%EC%9D%B8%EB%93%9C%EC%B9%B4%ED%8E%98?node-id=219%3A36','https://github.com/GJ-20/portfolio']  },
            { id : '8Tr1qzxFcwQ', ex : '8Tr1qzxFcwQ', title :'마인드카페 광고페이지2', links : [ '#4', '#2','#3']  },
            { id : '5KDai6hvgAs', ex : '5KDai6hvgAs', title :'마인드카페 광고페이지3', links : [ '#5', '#2','#3']  }
         ]
@@ -143,9 +143,9 @@ $("#side a").click(function(e){
         $('.pages button').click(function(){
             alert("준비중입니다")
         });
-        // $('.s_button li').each(function(){
-        //     $(this).find('a').attr('href', port_videoArr[count].links[$(this).index()])
-        // })
+        $('.s_button li').each(function(){
+            $(this).find('a').attr('href', port_videoArr[count].links[$(this).index()])
+        })
 
         // $('.pages button').click(function(){
         //     if($(this).hasClass('prevBtn')){
@@ -167,6 +167,66 @@ $("#side a").click(function(e){
         //     $('.v_content iframe').attr('src','https://www.youtube.com/embed/'+port_videoArr[count].id+'?autoplay=1&mute=1&modestbranding=1&controls=0&playlist='+port_videoArr[count].ex+'&loop=1')
 
         // })
+
+        $(".box1").click(function(){
+            $(".box1click").addClass("boxon")
+        })
+        $(".box1click").click(function(){
+            $(".box1click").removeClass("boxon")
+        })
+
+
+        $(".box2").click(function(){
+            $(".box7click").addClass("boxon")
+        })
+        $(".box7click").click(function(){
+            $(".box7click").removeClass("boxon")
+        })
+
+
+        $(".box3").click(function(){
+            $(".box2click").addClass("boxon")
+        })
+        $(".box2click").click(function(){
+            $(".box2click").removeClass("boxon")
+        })
+
+        $(".box4").click(function(){
+            $(".box3click").addClass("boxon")
+        })
+        $(".box3click").click(function(){
+            $(".box3click").removeClass("boxon")
+        })
+
+
+        $(".box5").click(function(){
+            $(".box4click").addClass("boxon")
+        })
+        $(".box4click").click(function(){
+            $(".box4click").removeClass("boxon")
+        })
+
+
+        $(".box6").click(function(){
+            $(".box5click").addClass("boxon")
+        })
+        $(".box5click").click(function(){
+            $(".box5click").removeClass("boxon")
+        })
+
+        $(".box7").click(function(){
+            $(".box6click").addClass("boxon")
+        })
+        $(".box6click").click(function(){
+            $(".box6click").removeClass("boxon")
+        })
+
+        $(".box8").click(function(){
+            $(".box8click").addClass("boxon")
+        })
+        $(".box8click").click(function(){
+            $(".box8click").removeClass("boxon")
+        })
 
     }) ////ready
 
